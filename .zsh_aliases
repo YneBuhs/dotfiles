@@ -1,1 +1,6 @@
 alias dot="cd ~/Workspace/dotfiles"
+alias work="cd ~/Workspace/kept-items-ui"
+alias v="vim"
+alias wants="cd ~/Workspace/dotfiles && v sharpeners.md"
+alias vcon="v ~/.vimrc"
+alias zcon="v ~/.zshrc"
