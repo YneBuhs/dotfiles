@@ -14,5 +14,6 @@ plugins=(
   git
 )
 # Source the other file with sensitive information
-source ~/.zshrc.local
+source $HOME/Workspace/dotfiles/.zshrc.local
 source $ZSH/oh-my-zsh.sh
+source $HOME/Workspace/dotfiles/.zsh_aliases
