@@ -4,3 +4,5 @@ alias v="vim"
 alias wants="cd ~/Workspace/dotfiles && v sharpeners.md"
 alias vcon="v ~/.vimrc"
 alias zcon="v ~/.zshrc"
+#alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+#alias loadbash='[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
