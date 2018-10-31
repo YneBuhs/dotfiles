@@ -1,7 +1,5 @@
 VIM Wants
-- Be able to 'accept incoming changes' for merge conflicts
-- Be able to change window pane length from vim (or is this an iterm thing?)
-- Be able to yank from one file and paste in another
-Git wants
-Alias for git add -p and git fixup
-
+-autocomplete brackets -- easier way to not always close and delete?
+-put brackets or quotes around visual blocks?
+-map vertical res
+-be able to find and change within specific quotes/tag/etc

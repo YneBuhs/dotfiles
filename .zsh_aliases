@@ -1,8 +1,9 @@
 alias dot="cd ~/Workspace/dotfiles"
-alias work="cd ~/Workspace/kept-items-ui"
-alias v="vim"
+alias v="nvim"
 alias wants="cd ~/Workspace/dotfiles && v sharpeners.md"
 alias vcon="v ~/.vimrc"
 alias zcon="v ~/.zshrc"
+alias gcon="v ~/.gitconfig"
+alias zshal="cd ~/Workspace/dotfiles && v .zsh_aliases"
 #alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 #alias loadbash='[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
