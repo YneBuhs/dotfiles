@@ -1,8 +1,7 @@
 " ----------------------------------------------------------------------------
 " Mappings
 " ----------------------------------------------------------------------------
-let mapleader=","
-inoremap jk <esc>
+let mapleader="'"
 
 " open fold with space
 nnoremap <Leader><Space> za
@@ -11,7 +10,7 @@ nnoremap <Leader><Space> za
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Space> :noh<CR>:echo ''<CR>
+noremap <Space> :set nohlsearch<CR>:echo ''<CR>
 
 " move vertically by visual line
 nnoremap j gj
@@ -21,7 +20,9 @@ nnoremap _ ddkP
 nnoremap + yyp
 nnoremap <leader>+ <C-w>>
 nnoremap <leader>- <C-w><
-nnoremap == :winc =<CR>
+nnoremap == :winc =<CR>:echo ''<CR>
+nnoremap ; :
+nnoremap : ;
 
 " NERDTree configs
 map <C-n> :NERDTreeToggle<CR>
@@ -32,12 +33,13 @@ nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " ----------------------------------------------------------------------------
-"  Abbreviations
+"  Abbreviations and Autocommands
 " ----------------------------------------------------------------------------
 iabbrev componenet component
 iabbrev Componenet Component
-iabbrev fc function
-iabbrev function try-an-abbrev!
+
+" Remove trailing white space
+autocmd BufWritePre * %s/\s\+$//e
 
 " ----------------------------------------------------------------------------
 "  UI
@@ -50,9 +52,6 @@ set backspace=2 " make backspace work like most other programs
 set nostartofline " ensure scrolling doesn't put cursor at start of line
 set cursorline
 let g:signify_vcs_list = ['git']
-
-" Remove trailing white space
-autocmd BufWritePre * %s/\s\+$//e
 
 " Line and SignColumn settings
 set number
@@ -120,9 +119,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx' " JSX syntax
-Plug 'w0rp/ale'
 Plug 'vim-syntastic/syntastic' " For errors, check bottom right, put cursor on line to see error
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
