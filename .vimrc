@@ -3,9 +3,6 @@
 " ----------------------------------------------------------------------------
 let mapleader="'"
 
-" open fold with space
-nnoremap <Leader><Space> za
-
 " Rspec tests
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -22,10 +19,8 @@ nnoremap <leader>+ <C-w>>
 nnoremap <leader>- <C-w><
 nnoremap == :winc =<CR>:echo ''<CR>
 nnoremap ; :
-nnoremap : ;
 
 " NERDTree configs
-map <C-n> :NERDTreeToggle<CR>
 
 "  editing config files
 nnoremap <leader>ev :vsp ~/.vimrc<CR>
@@ -33,21 +28,16 @@ nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " ----------------------------------------------------------------------------
-"  Abbreviations and Autocommands
+"  Autocommands
 " ----------------------------------------------------------------------------
-iabbrev componenet component
-iabbrev Componenet Component
-
 " Remove trailing white space
 autocmd BufWritePre * %s/\s\+$//e
 
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
-syntax on " turn on syntax highlighting
-let base16colorspace=256
-colorscheme base16-ocean
-let g:airline_theme = 'base16'
+syntax on
+colorscheme gruvbox
 set backspace=2 " make backspace work like most other programs
 set nostartofline " ensure scrolling doesn't put cursor at start of line
 set cursorline
@@ -94,7 +84,7 @@ set undoreload=1000 "number of undos a file can have after persistence
 " ----------------------------------------------------------------------------
 "  Globals
 " ----------------------------------------------------------------------------
-let g:closetag_xhtml_filenames = '*.jsx'
+" let g:closetag_xhtml_filenames = '*.jsx'
 let g:UltiSnipsExpandTrigger="<C-l>"
 
 " ----------------------------------------------------------------------------
@@ -123,26 +113,11 @@ Plug 'vim-syntastic/syntastic' " For errors, check bottom right, put cursor on l
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-" ==============================================================================
-" SIGNS                                                            *signify-signs*
-"     `+`     This line was added.
-"     `!`     This line was modified.
-"     `_1`    The number of deleted lines below this sign. If the number is larger
-"     `99`    than 9, the `_` will be omitted. For numbers larger than 99, `_>`
-"     `_>`    will be shown instead.
-"     `!1`    This line was modified and a number of lines below were deleted.
-"     `!>`    It is a combination of `!` and `_`. If the number is larger than 9,
-"           `!>` will be shown instead.
-"
-"     `‾`     The first line was removed. It's a special case of the `_` sign.
-"
-" See |g:signify_sign_add| on how to use different signs.
-" ==============================================================================
-
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 
 " Autocomplete
 Plug 'jiangmiao/auto-pairs'
@@ -163,16 +138,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'pangloss/vim-javascript'
-
 " Testing
 Plug 'thoughtbot/vim-rspec'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
-" React code snippets
-Plug 'epilande/vim-react-snippets' " check here: https://github.com/epilande/vim-react-snippets
-
 " Ultisnips
 Plug 'SirVer/ultisnips'
 call plug#end()
+" ----------------------------------------------------------------------------
