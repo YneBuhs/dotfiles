@@ -3,12 +3,6 @@
 " ----------------------------------------------------------------------------
 let mapleader="'"
 
-" Rspec tests
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-noremap <Space> :set nohlsearch<CR>:echo ''<CR>
-
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -19,8 +13,14 @@ nnoremap <leader>+ <C-w>>
 nnoremap <leader>- <C-w><
 nnoremap == :winc =<CR>:echo ''<CR>
 nnoremap ; :
+noremap <Space> :nohlsearch<CR>:echo ''<CR>
+noremap paste "+p
+noremap copy "+y
 
 " NERDTree configs
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 "  editing config files
 nnoremap <leader>ev :vsp ~/.vimrc<CR>
@@ -37,7 +37,6 @@ autocmd BufWritePre * %s/\s\+$//e
 "  UI
 " ----------------------------------------------------------------------------
 syntax on
-colorscheme gruvbox
 set backspace=2 " make backspace work like most other programs
 set nostartofline " ensure scrolling doesn't put cursor at start of line
 set cursorline
@@ -86,6 +85,7 @@ set undoreload=1000 "number of undos a file can have after persistence
 " ----------------------------------------------------------------------------
 " let g:closetag_xhtml_filenames = '*.jsx'
 let g:UltiSnipsExpandTrigger="<C-l>"
+let g:vim_jsx_pretty_highlight_close_tag=1
 
 " ----------------------------------------------------------------------------
 "  File Navigation
@@ -108,7 +108,6 @@ Plug 'wakatime/vim-wakatime'
 " Make code prettier
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'mxw/vim-jsx' " JSX syntax
 Plug 'vim-syntastic/syntastic' " For errors, check bottom right, put cursor on line to see error
 " Git
 Plug 'tpope/vim-fugitive'
@@ -123,7 +122,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-ragtag'
 Plug 'alvan/vim-closetag'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'    "<C-Y>, to tab out the html
 Plug 'tpope/vim-surround' "'cs' command to change pair (cs'[) changes single quote to []
                           "'yss[x]' wrap entire line in delimiter
                           "'ysiw[x]' wrap x delimiter around word
