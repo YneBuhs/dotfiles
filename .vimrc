@@ -133,6 +133,9 @@ Plug 'tpope/vim-repeat'
 " Search
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Code blocks
+Plug 'wellle/targets.vim'
+
 " Syntax Highlighting Plugins
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'

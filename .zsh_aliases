@@ -1,4 +1,5 @@
 alias bs="bundle exec rspec"
+alias be="bundle exec"
 alias dot="cd ~/Workspace/dotfiles"
 alias v="nvim"
 alias wants="cd ~/Workspace/dotfiles && v sharpeners.md"
