@@ -6,6 +6,7 @@ let mapleader="'"
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+nnoremap ggg gg=G
 nnoremap - ddp
 nnoremap _ ddkP
 nnoremap + yyp
@@ -32,7 +33,6 @@ nnoremap <leader>sv :source ~/.vimrc<CR>
 " ----------------------------------------------------------------------------
 " Remove trailing white space
 autocmd BufWritePre * %s/\s\+$//e
-
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
@@ -108,6 +108,8 @@ Plug 'wakatime/vim-wakatime'
 " Make code prettier
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'prettier/vim-prettier'
+Plug 'sbdchd/neoformat'
 Plug 'vim-syntastic/syntastic' " For errors, check bottom right, put cursor on line to see error
 " Git
 Plug 'tpope/vim-fugitive'
@@ -124,10 +126,10 @@ Plug 'tpope/vim-ragtag'
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'    "<C-Y>, to tab out the html
 Plug 'tpope/vim-surround' "'cs' command to change pair (cs'[) changes single quote to []
-                          "'yss[x]' wrap entire line in delimiter
-                          "'ysiw[x]' wrap x delimiter around word
-                          "'ds[x]' command to delete x delimiter
-                          "'S' for delimiters around visual blocks
+"'yss[x]' wrap entire line in delimiter
+"'ysiw[x]' wrap x delimiter around word
+"'ds[x]' command to delete x delimiter
+"'S' for delimiters around visual blocks
 Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-repeat'
 " Search
