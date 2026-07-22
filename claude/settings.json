@@ -1,0 +1,18 @@
+{
+  "enabledPlugins": {
+    "ecc@ecc": true,
+    "code-review@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "ecc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/affaan-m/ECC.git"
+      }
+    }
+  },
+  "theme": "dark-ansi",
+  "editorMode": "vim",
+  "autoUpdaterReleaseChannel": "stable",
+  "skipWorkflowUsageWarning": true
+}

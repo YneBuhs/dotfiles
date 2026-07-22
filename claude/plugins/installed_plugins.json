@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "plugins": {
+    "ecc@ecc": [
+      {
+        "scope": "user",
+        "installPath": "/Users/shubeny/.claude/plugins/cache/ecc/ecc/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-06-11T19:15:06.771Z",
+        "lastUpdated": "2026-06-11T19:15:06.771Z",
+        "gitCommitSha": "fec84fcf19d1806232b21e38a80ac9fb595442dc"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/shubeny/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
+        "version": "unknown",
+        "installedAt": "2026-06-11T19:15:52.805Z",
+        "lastUpdated": "2026-07-22T15:34:16.062Z"
+      }
+    ]
+  }
+}
