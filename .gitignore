@@ -1,1 +1,12 @@
 .zshrc.local
+
+# claude/ is symlinked to ~/.claude (live runtime state, incl. credentials
+# and session transcripts). Only hand-authored config is safe to track.
+claude/*
+!claude/CLAUDE.md
+!claude/settings.json
+!claude/agent-skills/
+!claude/agent-skills/**
+
+# vim
+*.un~

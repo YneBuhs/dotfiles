@@ -78,7 +78,10 @@ set backup "enable backup files
 set writebackup "write backup files
 set backupdir=~/.vim/tmp/backups// "directory to save backup files
 set undofile "set ability to undo previous changes in a file after persistence
+set undodir=~/.vim/tmp/undo// "directory to save undo files
 set undoreload=1000 "number of undos a file can have after persistence
+if !isdirectory(&backupdir) | call mkdir(&backupdir, 'p') | endif
+if !isdirectory(&undodir) | call mkdir(&undodir, 'p') | endif
 
 " ----------------------------------------------------------------------------
 "  Globals
@@ -93,7 +96,7 @@ let g:vim_jsx_pretty_highlight_close_tag=1
 "CTRL+P
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 if executable('rg')
-  set grepprg=rg--color=never
+  set grepprg=rg\ --color=never
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
@@ -130,7 +133,6 @@ Plug 'tpope/vim-surround' "'cs' command to change pair (cs'[) changes single quo
 "'ysiw[x]' wrap x delimiter around word
 "'ds[x]' command to delete x delimiter
 "'S' for delimiters around visual blocks
-Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-repeat'
 " Search
 Plug 'ctrlpvim/ctrlp.vim'

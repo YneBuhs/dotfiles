@@ -1,18 +1,31 @@
 {
+  "model": "sonnet",
   "enabledPlugins": {
-    "ecc@ecc": true,
-    "code-review@claude-plugins-official": true
+    "mattpocock-skills@mattpocock": true,
+    "mattpocock-skills@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
     "ecc": {
       "source": {
         "source": "git",
         "url": "https://github.com/affaan-m/ECC.git"
       }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
     }
   },
+  "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
   "editorMode": "vim",
-  "autoUpdaterReleaseChannel": "stable",
-  "skipWorkflowUsageWarning": true
+  "autoUpdaterReleaseChannel": "stable"
 }
