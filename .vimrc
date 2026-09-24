@@ -18,6 +18,18 @@ noremap <Space> :nohlsearch<CR>:echo ''<CR>
 noremap paste "+p
 noremap copy "+y
 
+if has('nvim') && has('wsl')
+  let g:clipboard = {
+    \   'name': 'WslClipboard',
+    \   'copy': { '+': 'clip.exe', '*': 'clip.exe' },
+    \   'paste': {
+    \     '+': 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \     '*': 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    \   },
+    \   'cache_enabled': 0,
+    \ }
+endif
+
 " NERDTree configs
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -105,8 +117,7 @@ endif
 "  Plugins
 "  To install, run `:PlugInstall`
 " ----------------------------------------------------------------------------
-call plug#begin()
-Plug 'wakatime/vim-wakatime'
+call plug#begin('~/.vim/plugged')
 
 " Make code prettier
 Plug 'tomtom/tcomment_vim'

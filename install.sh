@@ -12,6 +12,7 @@ LINKS=(
   ".vimrc:.vimrc"
   ".tmux.conf:.tmux.conf"
   ".zsh_aliases:.zsh_aliases"
+  "nvim/init.vim:.config/nvim/init.vim"
   "claude:.claude"
 )
 
@@ -30,6 +31,7 @@ link() {
     echo "backup  $dest -> $BACKUP_DIR/"
   fi
 
+  mkdir -p "$(dirname "$dest")"
   ln -s "$src" "$dest"
   echo "linked  $dest -> $src"
 }
