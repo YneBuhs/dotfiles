@@ -1,5 +1,5 @@
 {
-  "model": "sonnet",
+  "model": "haiku",
   "enabledPlugins": {
     "mattpocock-skills@mattpocock": true,
     "mattpocock-skills@claude-plugins-official": true
@@ -27,5 +27,6 @@
   "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
   "editorMode": "vim",
-  "autoUpdaterReleaseChannel": "stable"
+  "autoUpdaterReleaseChannel": "stable",
+  "cleanupPeriodDays": 14
 }

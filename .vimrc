@@ -161,6 +161,9 @@ Plug 'thoughtbot/vim-rspec'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" C-hjkl across nvim splits and tmux panes
+Plug 'christoomey/vim-tmux-navigator'
+
 " Ultisnips
 Plug 'SirVer/ultisnips'
 call plug#end()
