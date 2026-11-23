@@ -7,6 +7,19 @@ claude/*
 !claude/settings.json
 !claude/agent-skills/
 !claude/agent-skills/**
+!claude/agent-rules/
+!claude/agent-rules/**
+!claude/agent-guard/
+!claude/agent-guard/*.sh
+!claude/skills/
+!claude/skills/task-kickoff/
+!claude/skills/task-kickoff/**
+!claude/skills/pr-ready-check/
+!claude/skills/pr-ready-check/**
+!claude/skills/pr-writing/
+!claude/skills/pr-writing/**
 
 # vim
 *.un~
+claude/skills/synced/
+claude/agent-guard/audit/
